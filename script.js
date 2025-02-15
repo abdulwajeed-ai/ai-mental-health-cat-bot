@@ -20,13 +20,22 @@ async function sendMessage() {
         });
 
         let data = await response.json();
-        let botMessage = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't process your request.";
+        let rawText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't process your request.";
 
-        chatBox.innerHTML += `<p><strong>Bot:</strong> ${botMessage}</p>`;
+        // 🛠️ Format the text with bullet points & subheadings
+        let formattedText = rawText
+            .replace(/\n{2,}/g, "<br><br>")  // Paragraph breaks
+            .replace(/\n-/g, "<br>•")        // Convert "-" to bullet points
+            .replace(/\n\d+\./g, match => `<br><strong>${match.trim()}</strong>`) // Convert numbered lists to bold
+            .replace(/\n/g, "<br>")          // Convert remaining new lines to <br>
+            .replace(/\s+/g, " ")            // Remove extra spaces
+            .trim();                         
+
+        chatBox.innerHTML += `<p><strong>Ai Therapist:</strong> ${formattedText}</p>`;
         chatBox.scrollTop = chatBox.scrollHeight;
 
     } catch (error) {
         console.error("Error fetching response:", error);
-        chatBox.innerHTML += `<p><strong>Bot:</strong> Error: ${error.message}</p>`;
+        chatBox.innerHTML += `<p><strong>Ai Therapist:</strong> Error: ${error.message}</p>`;
     }
 }

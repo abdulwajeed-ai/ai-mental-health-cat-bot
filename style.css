@@ -1,41 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #fffbe6;
-    flex-direction: column ;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgb(1, 13, 39), rgb(110, 110, 110), rgb(25, 6, 37));
+  flex-direction: column;
 }
 .chat-container {
-    width: 80%;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid orangered
-    ;
+  width: 80%;
+  background: white;
+  background: linear-gradient(lightblue, white, pink);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid orangered;
+  box-shadow: 2px 2px 20px lightsea;
 }
 .chat-box {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 30px;
+  font-size: 1.2rem;
+  background-color: #fff;
+  
+  border-radius: 20px;
+  border: 1px dashed rgb(255, 34, 71);
+  margin-bottom: 10px;
 }
 input {
-    width: 70%;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid orangered;
+  width: 70%;
+  padding: 10px;
+  border-radius: 20px;
+
+  border: 1px solid lightseagreen;
 }
 button {
-    width: 25%;
-    padding: 10px;
-    background: orangered;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 20px;
+  width: 25%;
+  padding: 10px;
+  background: lightseagreen;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+footer{
+  color: white;
+  margin-top: 5rem;
+  font-size: 20px;
+  font-family: monospace;
 }
