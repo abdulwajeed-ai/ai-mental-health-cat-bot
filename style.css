@@ -10,7 +10,7 @@ body {
 .chat-container {
   width: 80%;
   background: white;
-  background: linear-gradient(lightblue, white, pink);
+  background-image: linear-gradient(to right top, #e95bac, #d86dc4, #c47ed6, #af8de2, #9a9ae8, #86a7f2, #71b2f7, #5fbdf9, #33ccff, #00dbfd, #00e8f4, #20f4e6);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
